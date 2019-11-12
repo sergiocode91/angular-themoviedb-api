@@ -1,3 +1,4 @@
-<div *ngFor="let movie of movies; let i = index">
-	{{ movie.original_title }}
-</div>
+<h2>populares</h2>
+<ul *ngFor="let movie of movies; let i = index">
+	<li style="float:left; margin: 0 15px">{{ movie.original_title }}</li>
+</ul>

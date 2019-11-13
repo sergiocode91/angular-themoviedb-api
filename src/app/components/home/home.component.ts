@@ -8,16 +8,28 @@ import { ApiService } from '../../services/api.service';
 })
 export class HomeComponent implements OnInit {
 
-	public movies: {};
+	public uncoming: any;
+	public popular: any;
+	public trending: any;
+	public popular_kids: any;
+	public top_rated: any;
 
-	constructor( private _apiService: ApiService ) { }
+	constructor( private _apiService: ApiService ) {
+		this._apiService.getUncoming()
+			.subscribe(data => this.uncoming = data);
 
-	ngOnInit() {
-		this._apiService.getPopulares()
-			.subscribe(data => {
-				this.movies = data
-				console.log(data);
-			});
-  	}
+		this._apiService.getPopular()
+			.subscribe(data => this.popular = data);
 
+		this._apiService.getTrending()
+			.subscribe(data => this.trending = data);
+
+		this._apiService.getPopularKids()
+			.subscribe(data => this.popular_kids = data);
+
+		this._apiService.getTopRated()
+			.subscribe(data => this.top_rated = data);
+	}
+
+	ngOnInit() {}
 }

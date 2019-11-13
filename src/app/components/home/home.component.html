@@ -1,4 +1,36 @@
-<h2>populares</h2>
-<ul *ngFor="let movie of movies; let i = index">
-	<li style="float:left; margin: 0 15px">{{ movie.original_title }}</li>
-</ul>
+<h2>Uncoming</h2>
+<div class="main-movie">
+	<div class="main-movie__item" *ngFor="let item of uncoming">
+		<img src="https://image.tmdb.org/t/p/w200{{ item.poster_path }}">
+	</div>
+</div>
+	
+
+<!--<h2>Popular</h2>
+<div style="display: flex;">
+	<div *ngFor="let item of popular; let i = index">
+		<img src="https://image.tmdb.org/t/p/w200{{ item.poster_path }}">
+	</div>
+</div>
+ <h2>Popular Kids</h2>
+<div style="display: flex;">
+	<div *ngFor="let item of popular_kids; let i = index">
+		<img src="https://image.tmdb.org/t/p/w200{{ item.poster_path }}">
+	</div>
+</div>
+<br>
+<br>
+<h2>Trending</h2>
+<div style="display: flex;">
+	<div *ngFor="let item of trending; let i = index">
+		<img src="https://image.tmdb.org/t/p/w200{{ item.poster_path }}">
+	</div>
+</div>
+<br>
+<br>
+<h2>Top Rated</h2>
+<div style="display: flex;">
+	<div *ngFor="let item of top_rated; let i = index">
+		<img src="https://image.tmdb.org/t/p/w200{{ item.poster_path }}">
+	</div>
+</div> -->

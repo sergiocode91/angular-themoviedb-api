@@ -1,1 +1,16 @@
-<router-outlet></router-outlet>
+<div class="main-container">
+	<div class="main-container__sidebar">
+		<!-- sidebar -->
+		<app-sidebar></app-sidebar>
+	</div>
+	<div class="main-container__content">
+		<!-- navbar -->
+		<app-navbar></app-navbar>
+		<!-- slidershow -->
+		<app-slidershow></app-slidershow>
+		<div class="container-fluid">
+			<!-- content router -->
+			<router-outlet></router-outlet>
+		</div>
+	</div>
+</div>

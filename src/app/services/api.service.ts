@@ -27,11 +27,6 @@ export class ApiService {
 		.pipe( map( (data: any) => data.results));
 	}
 
-	getPopularKids() {
-		return this._htpp.get(`${this.URI}/discover/movie?certification_country=US&certification.lte=G&sort_by=popularity.desc&api_key=${this.KEY}&language=es-ES`)
-		.pipe( map( (data: any) => data.results));
-	}
-
 	getTopRated() {
 		return this._htpp.get(`${this.URI}/movie/top_rated?api_key=${this.KEY}&language=es-ES`)
 		.pipe( map( (data: any) => data.results));

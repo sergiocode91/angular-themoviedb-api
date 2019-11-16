@@ -11,7 +11,6 @@ export class HomeComponent implements OnInit {
 	public uncoming: any;
 	public popular: any;
 	public trending: any;
-	public popular_kids: any;
 	public top_rated: any;
 
 	constructor( private _apiService: ApiService ) {
@@ -24,9 +23,6 @@ export class HomeComponent implements OnInit {
 
 		this._apiService.getTrending()
 			.subscribe(data => this.trending = data);
-
-		this._apiService.getPopularKids()
-			.subscribe(data => this.popular_kids = data);
 
 		this._apiService.getTopRated()
 			.subscribe(data => this.top_rated = data);

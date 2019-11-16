@@ -8,6 +8,7 @@ import { HomeComponent } from './components/home/home.component';
 import { SidebarComponent } from './components/sidebar/sidebar.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { SlidershowComponent } from './components/slidershow/slidershow.component';
+import { MoviesComponent } from './components/movies/movies.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { SlidershowComponent } from './components/slidershow/slidershow.componen
     HomeComponent,
     SidebarComponent,
     NavbarComponent,
-    SlidershowComponent
+    SlidershowComponent,
+    MoviesComponent
   ],
   imports: [
     BrowserModule,

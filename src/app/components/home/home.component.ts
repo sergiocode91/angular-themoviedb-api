@@ -20,6 +20,7 @@ export class HomeComponent implements OnInit {
 
 		this._apiService.getPopular()
 			.subscribe(data => this.popular = data);
+			// .subscribe(data => console.log(data));
 
 		this._apiService.getTrending()
 			.subscribe(data => this.trending = data);

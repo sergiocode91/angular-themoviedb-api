@@ -1,10 +1,13 @@
 /* You can add global styles to this file, and also import other style files */
 body{
 	font-family: 'Montserrat', sans-serif;
+	font-size: 14px;
+	letter-spacing: .8px;
 }
 h1{
 	font-size: 48px;
-    font-weight: bold;
+	font-weight: bold;
+	margin-bottom: 18px;
 }
 h2{
 	font-size: 14px;
@@ -12,6 +15,9 @@ h2{
 	letter-spacing: 1.7px;
 	margin-bottom: 40px;
 	text-transform: uppercase;
+}
+a:hover{
+	text-decoration: none;
 }
 .header{
 	display: flex;
@@ -27,16 +33,8 @@ h2{
 		font-size: 11px;
 		font-weight: bold;
 		color: white;
-		opacity: .8;
-		letter-spacing: .8px;
-		margin: 0 14px 0 0;
-		transition: all 0.3s;
+		margin: 0 0 0 16px;
 		text-transform: uppercase;
-
-		&:hover{
-			opacity: 1;
-			text-decoration: none;
-		}
 	}
 	.icon-search{
 		display: flex;
@@ -67,13 +65,24 @@ h2{
 
 		.brand{
 			height: 80px;
+			margin-bottom: 40px;
+		}
+		a{
+			display: block;
+			text-align: center;
+			padding: 26px 0;
+
+			i{
+				font-size: 26px;
+				color:  #b7b7b7;
+			}
 		}
 	}
 }
 .main-movie{
 	display: grid;
 	gap: 30px;
-	grid-template-columns: repeat(5, 1fr);
+	grid-template-columns: repeat(6, 1fr);
 	.main-movie__item{
 		box-shadow: 0 2px 35px 0 2px 35px rgba(0, 0, 0, 0.10);
 	}
@@ -85,16 +94,16 @@ h2{
 	}
 }
 .main-slidershow{
-	height: 650px;
-	margin-top: -70px;
+	height: 600px;
+	margin-top: -80px;
 
 	.carousel-item{
-		height: 650px;
+		height: 600px;
 
 		.carousel-caption{
 			display: flex !important;
 			flex-direction: column;
-			height: 580px;
+			height: 600px;
 			right: 0;
 			left: 0;
 			justify-content: center;
@@ -105,21 +114,37 @@ h2{
 				display: inline-block;
 				font-size: 11px;
 				font-weight: bold;
-				letter-spacing: .8px;
 				color: white;
 				margin-right: 7px;
+				margin-bottom: 14px;
 				padding: 5px 10px;
 				opacity: .8;
 				text-transform: uppercase;
-				margin-bottom: 10px;
 				border-radius: 5px;
 				border: 2px solid white;
 			}
-			.carousel-indicators{
-				left: 0;
-				right: auto;
-				margin-left: 60px;
-				margin-right: 0;
+			h3{
+				font-size: 14px;
+				font-weight: bold;
+				opacity: 0.8;
+				text-transform: uppercase;
+			}
+			.main-genres{
+				margin-bottom: 10px;
+				
+				a{
+					font-size: 11px;
+					color: white;
+					font-weight: bold;
+					opacity: 0.8;
+					margin-right: 14px;
+					text-transform: uppercase;
+				}
+
+				i{
+					font-size: 12px;
+					margin-right: 4;
+				}
 			}
 		}
 		&:before {
@@ -138,6 +163,13 @@ h2{
 		margin-left: -50px;
 		position: absolute;
 	}
+	.carousel-indicators{
+		left: 0;
+		right: auto;
+		bottom: 40px;
+		margin-left: 60px;
+		margin-right: 0;
+	}
 }
 .img-cover{
 	width: 100%;
@@ -145,14 +177,13 @@ h2{
     object-fit: cover;
 }
 .container-fluid{
-	padding-right: 60px;
-	padding-left: 60px;
+	padding-right: 80px;
+	padding-left: 80px;
 }
 .button{
 	font-size: 11px;
     font-weight: bold;
     color: white;
-    letter-spacing: .8px;
     padding: 13px 24px;
 	transition: all 0.3s;
 	text-transform: uppercase;
@@ -163,7 +194,6 @@ h2{
 
 	&:hover{
 		color: white;
-		text-decoration: none;
 		background-color: rgba(255, 255, 255, 0.30);
 	}
 }
